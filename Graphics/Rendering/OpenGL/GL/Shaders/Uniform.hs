@@ -18,6 +18,7 @@ module Graphics.Rendering.OpenGL.GL.Shaders.Uniform (
    -- * Uniform variables
    UniformLocation, uniformLocation, activeUniforms, Uniform(..),
    UniformComponent,
+   getUniformLocationID
 ) where
 
 import Foreign.Marshal.Alloc
@@ -52,6 +53,10 @@ uniformLocation (Program program) name =
       fmap UniformLocation $
          withGLString name $
             glGetUniformLocation program
+
+
+getUniformLocationID :: UniformLocation -> GLint
+getUniformLocationID (UniformLocation i) = i
 
 --------------------------------------------------------------------------------
 

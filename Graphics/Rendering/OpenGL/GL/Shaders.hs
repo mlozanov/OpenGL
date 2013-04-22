@@ -33,6 +33,7 @@ module Graphics.Rendering.OpenGL.GL.Shaders (
    -- * Uniform variables
    UniformLocation, uniformLocation, activeUniforms, Uniform(..),
    UniformComponent,
+   getUniformLocationID,
 
    -- * Implementation limits related to GLSL
    maxVertexTextureImageUnits, maxTextureImageUnits,
